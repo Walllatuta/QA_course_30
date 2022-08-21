@@ -1,0 +1,146 @@
+1. Создать внешний репозиторий c названием JSON.
+# Go to https://github.com/ > Repositories > New > enter repositoy name > Create repository
+
+ 2. Клонировать репозиторий JSON на локальный компьютер.
+
+$ git clone https://github.com
+
+ 3. Внутри локального JSON создать файл “new.json”.
+ 
+# cd json
+
+# touch new.json
+
+ 4. Добавить файл под гит.
+ 
+# git add
+
+ 5. Закоммитить файл.
+ 
+# git commit -m "add new file"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+ 
+# git push
+
+ 7. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+
+$ vim new.json
+
+{
+	"person":{
+		"name":"Igor",
+		"age":38,
+		"Cat":{
+			"name":"Vary",
+			"age":3
+		},
+	
+		"desired fee":10000$
+	}
+
+
+ 8. Отправить изменения на внешний репозиторий.
+
+$ git commit -am "add info for my self"
+
+# git push
+
+ 9. Создать файл preferences.json
+
+$ touch preferences.json
+
+ 10. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+
+$ vim preferences.json
+
+{
+	"favorite movie":"Зеленая миля",
+	"favorite TV series":[
+		"Доктор хаус",
+		"Во все тяжкие",
+		"Игра престолов"
+	],
+	"favorite food":"sheepmeat",
+	"my favorite time of the year":"summer",
+	"the country I want to visit":"France"
+}
+
+
+ 11. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+
+$ touch sklls.json
+
+# vim sklls.json
+
+{
+	"Skils":{
+		"name":"теория",
+	"описание":[
+		"Что такое тестирование",
+		"багрепорты",
+		"документация",
+		"виды",
+		"методы",
+		"направления тестирования",
+    "Что такое клиент-серверная архитектура",
+    "HTTP Методы запросов на сервер",
+    "Коды ответов HTTP сервера",
+    "Структуры HTTP запросов и ответов",
+                 "Что такое JSON, XML. Их структура",
+                 "Тестирование API через Postman (JS, автотесты API)",
+                 "Снятие и чтение логов c внешнего сервера",
+               "Снифинг http web трафика через Charles и Fiddler",
+                "Dev Tools веб браузеров (Google Chrome, FireFox)",
+                 "VPN"
+                 ]
+	}
+}
+	
+
+ 12. Отправить сразу 2 файла на внешний репозиторий.
+
+$ git add {preferences.json,sklls.json}
+
+$ git commit -m "add new files"
+
+$ git push
+
+ 13. На веб интерфейсе создать файл bug_report.json.
+#json > add file > enter name > enter commit new file > Commit new file
+
+ 14. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+открыть bug_report.json для внесения изменений > внести изменения > дать название коменту > Commit changes
+
+ 15. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+# {
+        "ID": "123145654",
+        "Title": "Заголовок",
+        "Project": "Домашнее задание номер 2",
+        "STR": [
+                "1. Открыть…",
+                "2. Кликнуть…",
+                "3. Ввести в поле… значение N1",
+                "4. Ввести в поле… значение N2",
+                "5. Кликнуть кнопку"
+        ],
+        "Enviroment":
+        {
+                "OS": "Windows 10 x64 build 19043",
+                "Версия": "102.0.5005.63 (Официальная сборка), (64 бит)"
+},
+"Build": "0.5.7",
+        "Actual result": "В поле Result отображается V1",
+        "Expected result": "В поле Result отображается V2",
+        "Severity": "Critical",
+        "Priority": "High",
+        "Status": "Open",
+        "Author": "Вася пупкин",
+        "Attachments": "ссылка_на_картинку_или_видео_с_багом"
+}
+ 16. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+# ткрыть bug_report.json для внесения изменений > внести изменения > дать название коменту > Commit changes
+
+ 27. Синхронизировать внешний и локальный репозиторий JSON
+
+$ git pull

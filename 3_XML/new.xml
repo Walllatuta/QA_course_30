@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<person>
+	<name>Igor</name>
+	<age>38</age>
+
+	<cat>
+		<name>Vary</name>
+		<age>3</age>
+	</cat>
+	</person>
+	<message>desired fee 10000$</message>

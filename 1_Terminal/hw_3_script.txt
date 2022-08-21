@@ -1,0 +1,19 @@
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+a) curl http://162.55.220.72:5005/terminal-hw-request
+b) curl 'http://162.55.220.72:5005/get_method?name=Kris&age=27'
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+#script.sh
+
+mkdir QA
+cd QA
+mkdir qa_1 qa_2 qa_3
+cd qa_1
+touch doc1.txt doc2.txt doc3.txt doc4.json doc5.json
+mkdir qa_4 qa_5 qa_6
+ls
+mv doc1.txt doc2.txt ../qa_2/
+cd ../../
+rm -rf QA

@@ -1,0 +1,151 @@
+1. Создать внешний репозиторий c названием XML.
+# Go to https://github.com/ > Repositories > New > enter repositoy name > Create repository
+
+ 2. Клонировать репозиторий XML на локальный компьютер.
+
+$ git clone https://github.com
+
+ 3. Внутри локального XML создать файл “new.xml”.
+
+$ cd xml
+
+$ touch new.xml
+
+
+ 4. Добавить файл под гит.
+
+$ git add new.xml
+
+ 5. Закоммитить файл.
+
+$ git commit -m "add new file"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+
+$ git push
+
+ 7. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+$ vim new.xml
+
+
+ <?xml version="1.0" encoding="UTF-8" ?>
+<person>
+        <name>Igor</name>
+        <age>38</age>
+        <cat>
+                <name>Vary</name>
+                <age>3</age>
+        </cat>
+
+        <desired fee>10000$</desired fee>
+</percon>
+
+ 8. Отправить изменения на внешний репозиторий.
+
+$ git add new.xml
+
+$ git commit -m "update file"
+
+$ git push
+
+ 9. Создать файл preferences.xml
+
+$ touch preferences.xml
+
+ 10. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+
+$ vim preferences.xml
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <favorite movie>Зеленая миля</favorite movie>
+  <favorite TV series>Доктор хаус</favorite TV series>
+  <favorite TV series>Во все тяжкие</favorite TV series>
+  <favorite TV series>Игра престолов</favorite TV series>
+  <favorite food>sheepmeat</favorite food>
+  <my favorite time of the year>summer</my favorite time of the year>
+  <the country I want to visit>France</the country I want to visit>
+</root>
+
+
+ 11. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+
+$ touch sklls.xml
+
+$ vim sklls.xml
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <Skils>
+    <name>теория</name>
+    <описание>Что такое тестирование</описание>
+    <описание>багрепорты</описание>
+    <описание>документация</описание>
+    <описание>виды</описание>
+    <описание>методы</описание>
+    <описание>направления тестирования</описание>
+    <описание>Что такое клиент-серверная архитектура</описание>
+    <описание>HTTP Методы запросов на сервер</описание>
+    <описание>Коды ответов HTTP сервера</описание>
+    <описание>Структуры HTTP запросов и ответов</описание>
+    <описание>Что такое JSON, XML. Их структура</описание>
+    <описание>Тестирование API через Postman (JS, автотесты API)</описание>
+    <описание>Снятие и чтение логов c внешнего сервера</описание>
+    <описание>Снифинг http web трафика через Charles и Fiddler</описание>
+    <описание>Dev Tools веб браузеров (Google Chrome, FireFox)</описание>
+    <описание>VPN</описание>
+  </Skils>
+</root>
+
+		 
+	
+ 12. Сделать коммит в одну строку.
+
+$ git add {preferences.xml,sklls.xml} | git commit -m "add new files"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+
+$ git push .
+
+
+ 14. На веб интерфейсе создать файл bug_report.xml.
+#xml > add file > enter name > enter commit new file > Commit new file
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+# открыть bug_report.xml для внесения изменений > внести изменения > дать название коменту > Commit changes
+
+ 16. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+# <?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <ID>123145654</ID>
+  <Title>Заголовок</Title>
+  <Project>Домашнее задание номер 2</Project>
+  <STR>1. Открыть…</STR>
+  <STR>2. Кликнуть…</STR>
+  <STR>3. Ввести в поле… значение N1</STR>
+  <STR>4. Ввести в поле… значение N2</STR>
+  <STR>5. Кликнуть кнопку</STR>
+  <Enviroment>
+    <OS>Windows 10 x64 build 19043</OS>
+    <Версия>102.0.5005.63 (Официальная сборка), (64 бит)</Версия>
+  </Enviroment>
+  <Build>0.5.7</Build>
+  <Actual result>В поле Result отображается V1</Actual result>
+  <Expected result>В поле Result отображается V2</Expected result>
+  <Severity>Critical</Severity>
+  <Priority>High</Priority>
+  <Status>Open</Status>
+  <Author>Вася пупкин</Author>
+  <Attachments>ссылка_на_картинку_или_видео_с_багом</Attachments>
+</root>
+
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+# открыть bug_report.xml для внесения изменений > внести изменения > дать название коменту > Commit changes
+ 
+ 18. Синхронизировать внешний и локальный репозиторий XML
+ 
+$ git pull
